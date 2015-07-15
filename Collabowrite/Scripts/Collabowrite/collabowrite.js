@@ -2,6 +2,7 @@
     var canvas = new fabric.Canvas('drawingArea', {
         isDrawingMode: true
     });
+    var sessionId = $('#drawingArea').attr('name');
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
 
@@ -34,10 +35,10 @@
         });
     };
     $.connection.hub.start().done(function () {
-        draw.server.loadObjects();
+        draw.server.loadObjects(sessionId);
         canvas.on('object:added', function (object) {
             var json = JSON.stringify(object.target);
-            if (send) draw.server.objectAdded(JSON.stringify(object.target));
+            if (send) draw.server.objectAdded(sessionId, JSON.stringify(object.target));
         });
     });
 });
