@@ -11,7 +11,12 @@ namespace Collabowrite.Controllers
         // GET: Collabowrite
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Session", new { id = Guid.NewGuid() });
+        }
+
+        public ActionResult Session(Guid id)
+        {
+            return View(id);
         }
     }
 }

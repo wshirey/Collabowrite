@@ -1,9 +1,9 @@
-﻿
+﻿@model System.Guid
 @{
     ViewBag.Title = "Index";
 }
 
-<canvas id="drawingArea" width="500" height="500"></canvas>
+<canvas id="drawingArea" width="500" height="500" name=@Model.ToString()></canvas>
 
 @section scripts
 {
