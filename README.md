@@ -1,2 +1,2 @@
 # Collabowrite
-https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva/branch/master
+[![Build status](https://ci.appveyor.com/api/projects/status/gt8ln0x3iyrj8v7f?svg=true)](https://ci.appveyor.com/project/wshirey/collabowrite)
