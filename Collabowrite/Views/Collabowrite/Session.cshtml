@@ -3,7 +3,9 @@
     ViewBag.Title = "Index";
 }
 
-<canvas id="drawingArea" width="500" height="500" name=@Model.ToString()></canvas>
+<div id="canvasWrapper">
+    <canvas id="drawingArea" name=@Model.ToString() width="600" height="600"></canvas>
+</div>
 
 @section scripts
 {

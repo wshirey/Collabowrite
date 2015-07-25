@@ -6,37 +6,64 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
 </head>
 <body>
-    @*<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a class="brand-logo" id="logo-container" href="#">Collabowrite</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <ul class="side-nav" id="nav-mobile" style="left: -250px;">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
         </div>
-    </div>*@
-    <div class="container body-content">
-        @RenderBody()
-        @*<hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>*@
+    </nav>
+    <div class="body-content">
+        <div class="container">
+            @RenderBody()
+        </div>
+        <footer class="page-footer white">
+            <div class="container valign-wrapper" >
+                <div class="row">
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="valign github-button"
+                       aria-label="Follow wshirey on GitHub"
+                       href="https://github.com/wshirey"
+                       data-count-aria-label="# followers on GitHub"
+                       data-count-api="/users/wshirey#followers"
+                       data-count-href="/wshirey/followers"
+                       data-style="mega">Follow @@wshirey</a>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="valign github-button"
+                       aria-label="Fork wshirey/collabowrite on GitHub"
+                       href="https://github.com/wshirey/collabowrite/fork"
+                       data-count-aria-label="# forks on GitHub"
+                       data-count-api="/repos/wshirey/collabowrite#forks_count"
+                       data-count-href="/wshirey/collabowrite/network"
+                       data-style="mega"
+                       data-icon="octicon-git-branch">Fork</a>
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="valign github-button"
+                       aria-label="Star wshirey/collabowrite on GitHub"
+                       href="https://github.com/wshirey/collabowrite"
+                       data-count-aria-label="# stargazers on GitHub"
+                       data-count-api="/repos/wshirey/collabowrite#stargazers_count"
+                       data-count-href="/wshirey/collabowrite/stargazers"
+                       data-style="mega"
+                       data-icon="octicon-star">Star</a>
+                </div>
+            </div>
+        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/materialize")
     @RenderSection("scripts", required: false)
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /*padding-top: 50px;*/
+    /*padding-bottom: 20px;*/
+    overflow: hidden
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,4 +28,8 @@ canvas {
     border: solid;
     border-color: gray;
     border-width: 1px;
+}
+
+#canvasWrapper {
+    display: inline-block
 }
